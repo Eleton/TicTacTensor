@@ -1,0 +1,64 @@
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  padding: 1rem;
+  display: inline-grid;
+  grid-template-columns: 1fr 6px 1fr 6px 1fr;
+  grid-template-rows: 1fr 6px 1fr 6px 1fr;
+}
+.grid div {
+  justify-self: center;
+  align-self: center;
+}
+
+.node {
+  min-width: 30px;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+.node .node:hover {
+  background-color: lightblue;
+}
+
+.node img {
+  width: 30px;
+  height: 30px;
+}
+.empty {
+  width: 30px;
+  height: 30px;
+}
+
+.line {
+  background-color: #222;
+  height: 100%;
+  width: 100%;
+}
+
+.north {
+  border-radius: 4px 4px 0 0;
+}
+.east {
+  border-radius: 0 4px 4px 0;
+}
+.south {
+  border-radius: 0 0 4px 4px;
+}
+.west {
+  border-radius: 4px 0 0 4px;
+}
