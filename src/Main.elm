@@ -195,4 +195,4 @@ checkWin grid =
 
 compareSymbols : Symbol -> Symbol -> Symbol -> Bool
 compareSymbols x y z =
-  ((==) x y) && ((==) x z)
+  (x == y) && (x == z) && x /= None

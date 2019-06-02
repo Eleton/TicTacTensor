@@ -5033,9 +5033,10 @@ var author$project$Main$symbolToHtml = function (symbol) {
 				_List_Nil);
 	}
 };
+var elm$core$Basics$neq = _Utils_notEqual;
 var author$project$Main$compareSymbols = F3(
 	function (x, y, z) {
-		return _Utils_eq(x, y) && _Utils_eq(x, z);
+		return _Utils_eq(x, y) && (_Utils_eq(x, z) && (!_Utils_eq(x, author$project$Main$None)));
 	});
 var author$project$Main$checkWin = function (grid) {
 	var e8 = A2(
