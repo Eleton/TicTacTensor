@@ -3,17 +3,16 @@
   display: grid;
   grid-template-rows: auto 2fr auto 5fr; 
   grid-template-areas: "header" "lol" "grid" "lel";
-  /* align-items: center;
-  flex-direction: column; */
 }
 
 h1 {
   grid-area: header;
   justify-self: center;
+  display: flex;
   font-size: calc(4vh + 2vw);
+  font-family: 'Noto Sans HK', sans-serif;
   margin: 0;
   padding-top: 2vh;
-  display: flex;
 }
 
 h1 span img {
