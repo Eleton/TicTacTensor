@@ -56,6 +56,16 @@ h1 span img {
   justify-content: center;
   align-items: center;
 }
+
+.symbolWrapper {
+  height: 100%;
+  transition: opacity 1s;
+  opacity: 1;
+}
+.emptyNode .symbolWrapper {
+  opacity: 0;
+}
+
 .emptyNode:hover {
   background-color: lightblue;
 }

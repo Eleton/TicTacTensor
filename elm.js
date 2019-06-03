@@ -5009,28 +5009,55 @@ var author$project$Main$symbolToHtml = function (symbol) {
 	switch (symbol) {
 		case 0:
 			return A2(
-				elm$html$Html$img,
+				elm$html$Html$div,
 				_List_fromArray(
 					[
-						elm$html$Html$Attributes$src('assets/svg/cross.svg')
+						elm$html$Html$Attributes$class('symbolWrapper')
 					]),
-				_List_Nil);
+				_List_fromArray(
+					[
+						A2(
+						elm$html$Html$img,
+						_List_fromArray(
+							[
+								elm$html$Html$Attributes$src('assets/svg/cross.svg')
+							]),
+						_List_Nil)
+					]));
 		case 1:
 			return A2(
-				elm$html$Html$img,
+				elm$html$Html$div,
 				_List_fromArray(
 					[
-						elm$html$Html$Attributes$src('assets/svg/circle.svg')
+						elm$html$Html$Attributes$class('symbolWrapper')
 					]),
-				_List_Nil);
+				_List_fromArray(
+					[
+						A2(
+						elm$html$Html$img,
+						_List_fromArray(
+							[
+								elm$html$Html$Attributes$src('assets/svg/circle.svg')
+							]),
+						_List_Nil)
+					]));
 		default:
 			return A2(
 				elm$html$Html$div,
 				_List_fromArray(
 					[
-						elm$html$Html$Attributes$class('empty')
+						elm$html$Html$Attributes$class('symbolWrapper')
 					]),
-				_List_Nil);
+				_List_fromArray(
+					[
+						A2(
+						elm$html$Html$div,
+						_List_fromArray(
+							[
+								elm$html$Html$Attributes$class('empty')
+							]),
+						_List_Nil)
+					]));
 	}
 };
 var elm$core$Basics$neq = _Utils_notEqual;
@@ -5145,16 +5172,7 @@ var author$project$Main$toGrid = F2(
 				]),
 			_List_fromArray(
 				[
-					A2(
-					elm$html$Html$div,
-					_List_fromArray(
-						[
-							elm$html$Html$Attributes$class('node')
-						]),
-					_List_fromArray(
-						[
-							A3(author$project$Main$toNode, grid, 0, n)
-						])),
+					A3(author$project$Main$toNode, grid, 0, n),
 					A2(
 					elm$html$Html$div,
 					_List_fromArray(
@@ -5162,16 +5180,7 @@ var author$project$Main$toGrid = F2(
 							elm$html$Html$Attributes$class('line north')
 						]),
 					_List_Nil),
-					A2(
-					elm$html$Html$div,
-					_List_fromArray(
-						[
-							elm$html$Html$Attributes$class('node')
-						]),
-					_List_fromArray(
-						[
-							A3(author$project$Main$toNode, grid, 1, n)
-						])),
+					A3(author$project$Main$toNode, grid, 1, n),
 					A2(
 					elm$html$Html$div,
 					_List_fromArray(
@@ -5179,16 +5188,7 @@ var author$project$Main$toGrid = F2(
 							elm$html$Html$Attributes$class('line north')
 						]),
 					_List_Nil),
-					A2(
-					elm$html$Html$div,
-					_List_fromArray(
-						[
-							elm$html$Html$Attributes$class('node')
-						]),
-					_List_fromArray(
-						[
-							A3(author$project$Main$toNode, grid, 2, n)
-						])),
+					A3(author$project$Main$toNode, grid, 2, n),
 					A2(
 					elm$html$Html$div,
 					_List_fromArray(
@@ -5224,16 +5224,7 @@ var author$project$Main$toGrid = F2(
 							elm$html$Html$Attributes$class('line east')
 						]),
 					_List_Nil),
-					A2(
-					elm$html$Html$div,
-					_List_fromArray(
-						[
-							elm$html$Html$Attributes$class('node')
-						]),
-					_List_fromArray(
-						[
-							A3(author$project$Main$toNode, grid, 3, n)
-						])),
+					A3(author$project$Main$toNode, grid, 3, n),
 					A2(
 					elm$html$Html$div,
 					_List_fromArray(
@@ -5241,16 +5232,7 @@ var author$project$Main$toGrid = F2(
 							elm$html$Html$Attributes$class('line')
 						]),
 					_List_Nil),
-					A2(
-					elm$html$Html$div,
-					_List_fromArray(
-						[
-							elm$html$Html$Attributes$class('node')
-						]),
-					_List_fromArray(
-						[
-							A3(author$project$Main$toNode, grid, 4, n)
-						])),
+					A3(author$project$Main$toNode, grid, 4, n),
 					A2(
 					elm$html$Html$div,
 					_List_fromArray(
@@ -5258,16 +5240,7 @@ var author$project$Main$toGrid = F2(
 							elm$html$Html$Attributes$class('line')
 						]),
 					_List_Nil),
-					A2(
-					elm$html$Html$div,
-					_List_fromArray(
-						[
-							elm$html$Html$Attributes$class('node')
-						]),
-					_List_fromArray(
-						[
-							A3(author$project$Main$toNode, grid, 5, n)
-						])),
+					A3(author$project$Main$toNode, grid, 5, n),
 					A2(
 					elm$html$Html$div,
 					_List_fromArray(
@@ -5303,16 +5276,7 @@ var author$project$Main$toGrid = F2(
 							elm$html$Html$Attributes$class('line east')
 						]),
 					_List_Nil),
-					A2(
-					elm$html$Html$div,
-					_List_fromArray(
-						[
-							elm$html$Html$Attributes$class('node')
-						]),
-					_List_fromArray(
-						[
-							A3(author$project$Main$toNode, grid, 6, n)
-						])),
+					A3(author$project$Main$toNode, grid, 6, n),
 					A2(
 					elm$html$Html$div,
 					_List_fromArray(
@@ -5320,16 +5284,7 @@ var author$project$Main$toGrid = F2(
 							elm$html$Html$Attributes$class('line south')
 						]),
 					_List_Nil),
-					A2(
-					elm$html$Html$div,
-					_List_fromArray(
-						[
-							elm$html$Html$Attributes$class('node')
-						]),
-					_List_fromArray(
-						[
-							A3(author$project$Main$toNode, grid, 7, n)
-						])),
+					A3(author$project$Main$toNode, grid, 7, n),
 					A2(
 					elm$html$Html$div,
 					_List_fromArray(
@@ -5337,16 +5292,7 @@ var author$project$Main$toGrid = F2(
 							elm$html$Html$Attributes$class('line south')
 						]),
 					_List_Nil),
-					A2(
-					elm$html$Html$div,
-					_List_fromArray(
-						[
-							elm$html$Html$Attributes$class('node')
-						]),
-					_List_fromArray(
-						[
-							A3(author$project$Main$toNode, grid, 8, n)
-						]))
+					A3(author$project$Main$toNode, grid, 8, n)
 				]));
 	});
 var author$project$Main$toGridNode = F2(

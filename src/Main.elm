@@ -112,11 +112,11 @@ toGridNode grid n =
 toGrid : Array Symbol -> Int -> Html Msg
 toGrid grid n =
   div [ class "grid" ]
-    [ div [ class "node" ] [ toNode grid 0 n ]
+    [ toNode grid 0 n
     , div [ class "line north" ] []
-    , div [ class "node" ] [ toNode grid 1 n ]
+    , toNode grid 1 n
     , div [ class "line north" ] []
-    , div [ class "node" ] [ toNode grid 2 n ]
+    , toNode grid 2 n
 
     , div [ class "line west" ] []
     , div [ class "line" ] []
@@ -124,11 +124,11 @@ toGrid grid n =
     , div [ class "line" ] []
     , div [ class "line east" ] []
 
-    , div [ class "node" ] [ toNode grid 3 n ]
+    , toNode grid 3 n
     , div [ class "line" ] []
-    , div [ class "node" ] [ toNode grid 4 n ]
+    , toNode grid 4 n
     , div [ class "line" ] []
-    , div [ class "node" ] [ toNode grid 5 n ]
+    , toNode grid 5 n
 
     , div [ class "line west" ] []
     , div [ class "line" ] []
@@ -136,11 +136,11 @@ toGrid grid n =
     , div [ class "line" ] []
     , div [ class "line east" ] []
     
-    , div [ class "node" ] [ toNode grid 6 n ]
+    , toNode grid 6 n
     , div [ class "line south" ] []
-    , div [ class "node" ] [ toNode grid 7 n ]
+    , toNode grid 7 n
     , div [ class "line south" ] []
-    , div [ class "node" ] [ toNode grid 8 n ]
+    , toNode grid 8 n
     ]
 
 toNode : Array Symbol -> Int -> Int -> Html Msg
@@ -158,9 +158,9 @@ toNode grid n superN =
 symbolToHtml : Symbol -> Html Msg
 symbolToHtml symbol =
   case symbol of
-    X -> img [ src "assets/svg/cross.svg" ] []
-    O -> img [ src "assets/svg/circle.svg" ] []
-    None -> div [ class "empty" ] []
+    X -> div [ class "symbolWrapper" ] [ img [ src "assets/svg/cross.svg" ] [] ]
+    O -> div [ class "symbolWrapper" ] [ img [ src "assets/svg/circle.svg" ] [] ]
+    None -> div [ class "symbolWrapper" ] [ div [ class "empty" ] [] ]
 
 changeTurn : Symbol -> Symbol
 changeTurn symbol =
