@@ -43,14 +43,13 @@ h1 span img {
 }
 
 .node {
-  min-width: 30px;
-  min-height: 30px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
 }
-.node .node:hover {
+.emptyNode:hover {
   background-color: lightblue;
 }
 

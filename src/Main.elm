@@ -147,7 +147,11 @@ toNode : Array Symbol -> Int -> Int -> Html Msg
 toNode grid n superN =
   case Array.get n grid of
   Just symbol ->
-    div [ class "node", onClick (Choose n superN) ] [ symbolToHtml symbol ]
+    case symbol of
+      None ->
+        div [ class "node emptyNode", onClick (Choose n superN) ] [ symbolToHtml None ]
+      x_or_o ->
+        div [ class "node" ] [ symbolToHtml x_or_o ]
   _ ->
     text ""
 
@@ -156,9 +160,6 @@ symbolToHtml symbol =
   case symbol of
     X -> img [ src "assets/svg/cross.svg" ] []
     O -> img [ src "assets/svg/circle.svg" ] []
-    -- None -> text " "
-    -- X -> div [ class "cross" ] []
-    -- O -> div [ class "circle" ] []
     None -> div [ class "empty" ] []
 
 changeTurn : Symbol -> Symbol
