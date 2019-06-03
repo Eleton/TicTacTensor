@@ -5356,7 +5356,7 @@ var author$project$Main$toSuperGrid = function (grid) {
 		elm$html$Html$div,
 		_List_fromArray(
 			[
-				elm$html$Html$Attributes$class('grid')
+				elm$html$Html$Attributes$class('superGrid')
 			]),
 		_List_fromArray(
 			[
@@ -5597,7 +5597,10 @@ var author$project$Main$view = function (model) {
 					])),
 				A2(
 				elm$html$Html$div,
-				_List_Nil,
+				_List_fromArray(
+					[
+						elm$html$Html$Attributes$class('gridContainer')
+					]),
 				_List_fromArray(
 					[
 						author$project$Main$toSuperGrid(model.grids)

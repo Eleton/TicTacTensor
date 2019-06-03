@@ -59,14 +59,14 @@ view model =
     [ span [] [ text "Current turn: " ]
     , span [] [ (symbolToHtml model.turn) ]
     ]
-  , div []
+  , div [ class "gridContainer" ]
       [ toSuperGrid model.grids
       ]
   ]
 
 toSuperGrid : Array (Array Symbol) -> Html Msg
 toSuperGrid grid =
-  div [ class "grid" ]
+  div [ class "superGrid" ]
     [ div [ class "node" ] [ toGridNode grid (1 - 1) ]
     , div [ class "line north" ] []
     , div [ class "node" ] [ toGridNode grid (2 - 1) ]
